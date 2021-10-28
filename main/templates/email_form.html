@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule</title>
+</head>
+<body>
+<h2><center>Leave us your email to receive schedule</h2>>
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="OK">
+</form>
+<br><br><br><a href="{% url 'main:hello' %}">Back to Main Page</a>
+{% endblock %}
+</body>
+</html>

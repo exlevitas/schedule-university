@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University</title>
+</head>
+<body>
+<h2>You are welcome on the website of our University.</h2>
+<h3>Here you can find more valuable information about our University</h3>
+<h3>Choose right directory you are looking for</h3>
+<h4><a href="{% url 'main:student_list' %}">Students</a>
+<a href="{% url 'main:teacher_list' %}">Teachers</a>
+<a href="{% url 'main:groups_list' %}">Groups</a>
+<a href="{% url 'main:schedule' %}">Schedule</a></h4>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% block title %}
+<h2>Here you can find an information about all the groups of our University
+{% endblock %}
+{% block content %}
+{% for g in groups %}
+<br><br><h3>Group unique number {{ g.id }}: {{ g.group_name }} Total count: {{ g.group_count }}
+{% endfor %}
+{% for i in students %}
+Student unique number {{ i.id }}: {{ i.surname }} {{ i.name }} {{ i.middlename }}
+{% endfor %}
+<br><br><br><a href="{% url 'main:hello' %}">Back to Main Page</a>
+{% endblock %}

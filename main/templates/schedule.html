@@ -1,0 +1,11 @@
+{% block title %}
+<h2>Schedule Information
+{% endblock %}
+{% block content %}
+<br>Расписание действует с {{ start_week }} по {{ end_week }}
+{% for s in schedules %}
+<br><h3>Day: {{ s.day }} Time: {{ s.time }} Group: {{ s.group }} Teacher: {{ s.teacher }}
+{% endfor %}
+<br><br><br><a href="{% url 'main:email' %}">Receive schedule on email</a>
+<br><br><br><a href="{% url 'main:hello' %}">Back to Main Page</a>
+{% endblock %}

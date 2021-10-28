@@ -1,0 +1,9 @@
+{% block title %}
+<h2>Here you can find an information about all the teachers of our University
+{% endblock %}
+{% block content %}
+{% for i in teachers %}
+<br><br><h3>Teacher unique number {{ i.id }}: {{ i.surname }} {{ i.name }} {{ i.middlename }}
+{% endfor %}
+<br><br><br><a href="{% url 'main:hello' %}">Back to Main Page</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% block title %}
+<h2>Here you can find an information about all the students of our University
+{% endblock %}
+{% block content %}
+{% for h in students %}
+<br><br><h3>Student unique number {{ h.id }}: {{ h.surname }} {{ h.name }} {{ h.middlename }}
+<br><h4>Group: {{ h.group }}
+{% endfor %}
+<br><br><br><a href="{% url 'main:hello' %}">Back to Main Page</a>
+{% endblock %}
